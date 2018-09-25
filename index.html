@@ -5,16 +5,19 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://yifei325325.github.io">
   <title>四毛哥的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="记录生活，分享技术。">
+<meta property="og:type" content="website">
 <meta property="og:title" content="四毛哥的个人博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yifei325325.github.io/index.html">
 <meta property="og:site_name" content="四毛哥的个人博客">
+<meta property="og:description" content="记录生活，分享技术。">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="四毛哥的个人博客">
+<meta name="twitter:description" content="记录生活，分享技术。">
   
     <link rel="alternative" href="/atom.xml" title="四毛哥的个人博客" type="application/atom+xml">
   
@@ -404,7 +407,7 @@
 <p>在Flask Mega-Tutorial系列的第四部分，我将告诉你如何使用<em>数据库</em>。</p>
 <p>本章的主题是重中之重！大多数应用都需要持久化存储数据，并高效地执行的增删查改的操作，<em>数据库</em>为此而生。</p>
 <h2 id="Flask中的数据库"><a href="#Flask中的数据库" class="headerlink" title="Flask中的数据库"></a>Flask中的数据库</h2><p>Flask本身不支持数据库，相信你已经听说过了。 正如表单那样，这也是Flask有意为之。对使用的数据库插件自由选择，岂不是比被迫适应其中之一，更让人拥有主动权吗？</p>
-<p>绝大多数的数据库都提供了Python客户端包，它们之中的大部分都被封装成Flask插件以便更好地和Flask应用结合。数据库被划分为两大类，遵循<em>关系</em>模型的一类是关系数据库，另外的则是非关系数据库，简称<em>NoSQL</em>，表现在它们不支持流行的关系查询语言<a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a>（译者注：部分人也宣称NoSQL代表不仅仅只是SQL）。虽然两类数据库都是伟大的产品，但我认为关系数据库更适合具有结构化数据的应用程序，例如用户列表，用户动态等，而NoSQL数据库往往更适合非结构化数据。 本应用可以像大多数其他应用一样，使用任何一种类型的数据库来实现，但是出于上述原因，我将使用关系数据库。<br>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9AWeb%E8%A1%A8%E5%8D%95/" target="_blank" rel="noopener">第三章</a>中，我向你展示了第一个Flask扩展，在本章中，我还要用到两个。 第一个是<a href="http://packages.python.org/Flask-SQLAlchemy" target="_blank" rel="noopener">Flask-SQLAlchemy</a>，这个插件为流行的<a href="http://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a>包做了一层封装以便在Flask中调用更方便，类似<em>SQLAlchemy</em>这样的包叫做<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="noopener">Object Relational Mapper</a>，简称ORM。 ORM允许应用程序使用高级实体（如类，对象和方法）而不是表和SQL来管理数据库。 ORM的工作就是将高级操作转换成数据库命令。</p>
+<p>绝大多数的数据库都提供了Python客户端包，它们之中的大部分都被封装成Flask插件以便更好地和Flask应用结合。数据库被划分为两大类，遵循<em>关系</em>模型的一类是关系数据库，另外的则是非关系数据库，简称<em>NoSQL</em>，表现在它们不支持流行的关系查询语言<a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a>（译者注：部分人也宣称NoSQL代表不仅仅只是SQL）。虽然两类数据库都是伟大的产品，但我认为关系数据库更适合具有结构化数据的应用程序，例如用户列表，用户动态等，而NoSQL数据库往往更适合非结构化数据。 本应用可以像大多数其他应用一样，使用任何一种类型的数据库来实现，但是出于上述原因，我将使用关系数据库。<br>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9AWeb%E8%A1%A8%E5%8D%95/">第三章</a>中，我向你展示了第一个Flask扩展，在本章中，我还要用到两个。 第一个是<a href="http://packages.python.org/Flask-SQLAlchemy" target="_blank" rel="noopener">Flask-SQLAlchemy</a>，这个插件为流行的<a href="http://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a>包做了一层封装以便在Flask中调用更方便，类似<em>SQLAlchemy</em>这样的包叫做<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="noopener">Object Relational Mapper</a>，简称ORM。 ORM允许应用程序使用高级实体（如类，对象和方法）而不是表和SQL来管理数据库。 ORM的工作就是将高级操作转换成数据库命令。</p>
 
       
 
@@ -491,7 +494,7 @@
       
         <p>本文翻译自 <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms" target="_blank" rel="noopener">The Flask Mega-Tutorial Part III: Web Forms</a></p>
 <p>这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用<em>Web表单</em>。</p>
-<p>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF/" target="_blank" rel="noopener">第二章</a>中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。</p>
+<p>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF/">第二章</a>中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。</p>
 
       
 
@@ -578,7 +581,7 @@
       
         <p>本文翻译自<a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates" target="_blank" rel="noopener">The Flask Mega-Tutorial Part II: Templates</a><br>在Flask Mega-Tutorial系列的第二部分中，我将讨论如何使用<em>模板</em>。</p>
 <p>学习完<a href="">第一章</a>之后，你已经拥有了一个虽然简单，但是可以成功运行的Web应用，它的文件结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">microblog\</span><br><span class="line">  venv\</span><br><span class="line">  app\</span><br><span class="line">    __init__.py</span><br><span class="line">    routes.py</span><br><span class="line">  microblog.py</span><br></pre></td></tr></table></figure></p>
-<p>在终端会话中设置环境变量<code>FLASK_APP=microblog.py</code>，然后执行<code>flask run</code>命令来运行应用。<br>包含这个应用的Web服务启动之后，你可以通过在Web浏览器的地址栏中键入URL<em><a href="http://localhost:5000" target="_blank" rel="noopener">http://localhost:5000</a></em> 来验证。<br>本章将沿用这个应用，在此之上，你将学习如何生成包含复杂结构的诸多动态组件的网页。如果对这个应用和相关开发流程有所遗忘，情回顾<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9AHello-world/" target="_blank" rel="noopener">第一章</a>。</p>
+<p>在终端会话中设置环境变量<code>FLASK_APP=microblog.py</code>，然后执行<code>flask run</code>命令来运行应用。<br>包含这个应用的Web服务启动之后，你可以通过在Web浏览器的地址栏中键入URL<em><a href="http://localhost:5000" target="_blank" rel="noopener">http://localhost:5000</a></em> 来验证。<br>本章将沿用这个应用，在此之上，你将学习如何生成包含复杂结构的诸多动态组件的网页。如果对这个应用和相关开发流程有所遗忘，情回顾<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9AHello-world/">第一章</a>。</p>
 <h2 id="什么是模板？"><a href="#什么是模板？" class="headerlink" title="什么是模板？"></a>什么是模板？</h2><p>我设计的微博应用程序的主页会有一个欢迎用户的标题。虽然目前的应用程序还没有实现用户概念，但这不妨碍我使用一个Python字典来<em>模拟</em>一个用户，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user = &#123;&apos;username&apos;:&apos;Miguel&apos;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>创建模拟对象是一项实用的技术，它可以让你专注于应用程序的一部分，而无需为系统中尚不存在的其他部分分心。</p>
 
@@ -874,15 +877,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">flask 教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
             
             <div class="clearfix"></div>
