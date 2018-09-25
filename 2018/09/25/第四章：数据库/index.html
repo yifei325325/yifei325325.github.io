@@ -5,20 +5,20 @@
   
 
   
-  <title>第三章：Web表单 | Hexo</title>
+  <title>第四章：数据库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
+  <meta name="description" content="本文翻译自 The Flask Mega-Tutorial Part IV: Database 在Flask Mega-Tutorial系列的第四部分，我将告诉你如何使用数据库。 本章的主题是重中之重！大多数应用都需要持久化存储数据，并高效地执行的增删查改的操作，数据库为此而生。 Flask中的数据库Flask本身不支持数据库，相信你已经听说过了。 正如表单那样，这也是Flask有意为之。对使用的">
 <meta name="keywords" content="flask 教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第三章：Web表单">
-<meta property="og:url" content="http://yoursite.com/2018/09/25/第三章：Web表单/index.html">
+<meta property="og:title" content="第四章：数据库">
+<meta property="og:url" content="http://yoursite.com/2018/09/25/第四章：数据库/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
+<meta property="og:description" content="本文翻译自 The Flask Mega-Tutorial Part IV: Database 在Flask Mega-Tutorial系列的第四部分，我将告诉你如何使用数据库。 本章的主题是重中之重！大多数应用都需要持久化存储数据，并高效地执行的增删查改的操作，数据库为此而生。 Flask中的数据库Flask本身不支持数据库，相信你已经听说过了。 正如表单那样，这也是Flask有意为之。对使用的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-25T03:34:01.271Z">
+<meta property="og:updated_time" content="2018-09-25T03:42:47.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第三章：Web表单">
-<meta name="twitter:description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
+<meta name="twitter:title" content="第四章：数据库">
+<meta name="twitter:description" content="本文翻译自 The Flask Mega-Tutorial Part IV: Database 在Flask Mega-Tutorial系列的第四部分，我将告诉你如何使用数据库。 本章的主题是重中之重！大多数应用都需要持久化存储数据，并高效地执行的增删查改的操作，数据库为此而生。 Flask中的数据库Flask本身不支持数据库，相信你已经听说过了。 正如表单那样，这也是Flask有意为之。对使用的">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-第三章：Web表单" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-第四章：数据库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/09/25/第三章：Web表单/" class="article-date">
-  <time datetime="2018-09-25T03:31:57.000Z" itemprop="datePublished">2018-09-25</time>
+    <a href="/2018/09/25/第四章：数据库/" class="article-date">
+  <time datetime="2018-09-25T03:40:53.000Z" itemprop="datePublished">2018-09-25</time>
 </a>
     
   <div class="article-category">
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第三章：Web表单
+      第四章：数据库
     </h1>
   
 
@@ -91,14 +91,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文翻译自 <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms" target="_blank" rel="noopener">The Flask Mega-Tutorial Part III: Web Forms</a></p>
-<p>这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用<em>Web表单</em>。</p>
-<p>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF/" target="_blank" rel="noopener">第二章</a>中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。</p>
+        <p>本文翻译自 <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database" target="_blank" rel="noopener">The Flask Mega-Tutorial Part IV: Database</a></p>
+<p>在Flask Mega-Tutorial系列的第四部分，我将告诉你如何使用<em>数据库</em>。</p>
+<p>本章的主题是重中之重！大多数应用都需要持久化存储数据，并高效地执行的增删查改的操作，<em>数据库</em>为此而生。</p>
+<h2 id="Flask中的数据库"><a href="#Flask中的数据库" class="headerlink" title="Flask中的数据库"></a>Flask中的数据库</h2><p>Flask本身不支持数据库，相信你已经听说过了。 正如表单那样，这也是Flask有意为之。对使用的数据库插件自由选择，岂不是比被迫适应其中之一，更让人拥有主动权吗？</p>
+<p>绝大多数的数据库都提供了Python客户端包，它们之中的大部分都被封装成Flask插件以便更好地和Flask应用结合。数据库被划分为两大类，遵循<em>关系</em>模型的一类是关系数据库，另外的则是非关系数据库，简称<em>NoSQL</em>，表现在它们不支持流行的关系查询语言<a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a>（译者注：部分人也宣称NoSQL代表不仅仅只是SQL）。虽然两类数据库都是伟大的产品，但我认为关系数据库更适合具有结构化数据的应用程序，例如用户列表，用户动态等，而NoSQL数据库往往更适合非结构化数据。 本应用可以像大多数其他应用一样，使用任何一种类型的数据库来实现，但是出于上述原因，我将使用关系数据库。<br>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9AWeb%E8%A1%A8%E5%8D%95/" target="_blank" rel="noopener">第三章</a>中，我向你展示了第一个Flask扩展，在本章中，我还要用到两个。 第一个是<a href="http://packages.python.org/Flask-SQLAlchemy" target="_blank" rel="noopener">Flask-SQLAlchemy</a>，这个插件为流行的<a href="http://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a>包做了一层封装以便在Flask中调用更方便，类似<em>SQLAlchemy</em>这样的包叫做<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="noopener">Object Relational Mapper</a>，简称ORM。 ORM允许应用程序使用高级实体（如类，对象和方法）而不是表和SQL来管理数据库。 ORM的工作就是将高级操作转换成数据库命令。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/25/第三章：Web表单/" data-id="cjmh6dx9j00012ckxoolddq6e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/25/第四章：数据库/" data-id="cjmh6dx9q00052ckxy32l3aky" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-教程/">flask 教程</a></li></ul>
@@ -109,19 +111,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/09/25/第四章：数据库/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          第四章：数据库
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/25/第二章：模板/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/09/25/第三章：Web表单/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第二章：模板</div>
+      <div class="article-nav-title">第三章：Web表单</div>
     </a>
   
 </nav>
