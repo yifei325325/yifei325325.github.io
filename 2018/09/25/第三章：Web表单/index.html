@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2018/9 | Hexo</title>
+  <title>第三章：Web表单 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/09/index.html">
+  <meta name="description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
+<meta name="keywords" content="flask 教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三章：Web表单">
+<meta property="og:url" content="http://yoursite.com/2018/09/25/第三章：Web表单/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-25T03:34:01.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="第三章：Web表单">
+<meta name="twitter:description" content="本文翻译自 The Flask Mega-Tutorial Part III: Web Forms 这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用Web表单。 在第二章中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,78 +65,60 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/25/第三章：Web表单/" class="archive-article-date">
-  <time datetime="2018-09-25T03:31:57.000Z" itemprop="datePublished">Sep 25</time>
+        <section id="main"><article id="post-第三章：Web表单" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/25/第三章：Web表单/" class="article-date">
+  <time datetime="2018-09-25T03:31:57.000Z" itemprop="datePublished">2018-09-25</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flask-教程/">flask 教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/25/第三章：Web表单/">第三章：Web表单</a>
+    <h1 class="article-title" itemprop="name">
+      第三章：Web表单
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/25/第二章：模板/" class="archive-article-date">
-  <time datetime="2018-09-25T03:06:02.000Z" itemprop="datePublished">Sep 25</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/25/第二章：模板/">第二章：模板</a>
-    </h1>
-  
+        <p>本文翻译自 <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms" target="_blank" rel="noopener">The Flask Mega-Tutorial Part III: Web Forms</a></p>
+<p>这是Flask Mega-Tutorial系列的第三部分，我将告诉你如何使用<em>Web表单</em>。</p>
+<p>在<a href="https://yifei325325.github.io/2018/09/25/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF/" target="_blank" rel="noopener">第二章</a>中我为应用主页创建了一个简单的模板，并使用诸如用户和用户动态的模拟对象。在本章中，我将解决这个应用程序中仍然存在的众多遗漏之一，那就是如何通过Web表单接受用户的输入。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/25/第一章：Hello-world/" class="archive-article-date">
-  <time datetime="2018-09-25T02:38:45.000Z" itemprop="datePublished">Sep 25</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/25/第一章：Hello-world/">第一章：Hello world</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/25/第三章：Web表单/" data-id="cjmh636ur0001h0kxsgqkw45k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-教程/">flask 教程</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/09/25/第二章：模板/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第二章：模板</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
