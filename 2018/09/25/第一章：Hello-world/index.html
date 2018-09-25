@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yifei325325.github.io">
   <title>第一章：Hello world | 四毛哥的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。 教程中所有的代码示例都托管在GitHub上。">
+  <meta name="description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。">
 <meta name="keywords" content="flask 教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一章：Hello world">
 <meta property="og:url" content="http://yifei325325.github.io/2018/09/25/第一章：Hello-world/index.html">
 <meta property="og:site_name" content="四毛哥的个人博客">
-<meta property="og:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。 教程中所有的代码示例都托管在GitHub上。">
+<meta property="og:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-328651893e709b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-25T02:59:12.733Z">
+<meta property="og:updated_time" content="2018-09-25T09:58:06.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章：Hello world">
-<meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。 教程中所有的代码示例都托管在GitHub上。">
+<meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4961528-328651893e709b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="四毛哥的个人博客" type="application/atom+xml">
@@ -180,7 +180,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本文翻译自<a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank" rel="noopener">The Flask Mega-Tutorial Part I: Hello, World!</a></p>
-<p>一趟愉快的学习之旅即将开始，跟随它你将学会用<a href="https://python.org/" target="_blank" rel="noopener">Python</a>和<a href="http://flask.pocoo.org/" target="_blank" rel="noopener">Flask</a>来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。</p>
+<p>一趟愉快的学习之旅即将开始，跟随它你将学会用<a href="https://python.org/" target="_blank" rel="noopener">Python</a>和<a href="http://flask.pocoo.org/" target="_blank" rel="noopener">Flask</a>来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。<br><a id="more"></a></p>
 <p>教程中所有的代码示例都托管在GitHub上。虽然直接从GitHub下载代码可以节省写代码的步骤，但是我强烈建议你至少在前几章自己动手书写这些代码。一旦你熟悉了Flask和示例应用，一些繁琐重复的代码就可以直接从GitHub复制了。</p>
 <p>在每章的开头，我都将提供三个GitHub的链接来帮助你顺畅地学习本章的内容。点击<strong>Browse</strong>链接会打开GitHub上Microblog项目在本章的对应代码库页面，不会包含之后章节的任何新增代码。而<strong>Zip</strong>链接则提供了这份代码库的zip打包文件的下载地址。如果点击<strong>Diff</strong>链接，打开的将会是本章节的代码变更信息。</p>
 <p><em>本章的GitHub链接为: <a href="https://github.com/miguelgrinberg/microblog/tree/v0.1" target="_blank" rel="noopener">Browse</a>, <a href="https://github.com/miguelgrinberg/microblog/archive/v0.1.zip" target="_blank" rel="noopener">Zip</a>, <a href="https://github.com/miguelgrinberg/microblog/compare/v0.0...v0.1" target="_blank" rel="noopener">Diff</a>.</em></p>
