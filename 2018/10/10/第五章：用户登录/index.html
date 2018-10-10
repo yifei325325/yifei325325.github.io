@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yifei325325.github.io">
   <title>第五章：用户登录 | 四毛哥的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff. 密码哈希在">
+  <meta name="description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff.">
 <meta name="keywords" content="技术分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第五章：用户登录">
 <meta property="og:url" content="http://yifei325325.github.io/2018/10/10/第五章：用户登录/index.html">
 <meta property="og:site_name" content="四毛哥的个人博客">
-<meta property="og:description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff. 密码哈希在">
+<meta property="og:description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff.">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-28b62433a93cf278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-10T02:51:10.351Z">
+<meta property="og:updated_time" content="2018-10-10T03:23:48.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第五章：用户登录">
-<meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff. 密码哈希在">
+<meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part V: User Logins 这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。 你在第三章中学会了如何创建用户登录表单，在第四章中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。 本章的GitHub链接为：Browse, Zip, Diff.">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4961528-28b62433a93cf278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="四毛哥的个人博客" type="application/atom+xml">
@@ -179,6 +179,7 @@
 <p>这是Flask Mega-Tutorial系列的第五部分，我将告诉你如何创建一个用户登录子系统。</p>
 <p>你在<a href="https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9AWeb%E8%A1%A8%E5%8D%95.md" target="_blank" rel="noopener">第三章</a>中学会了如何创建用户登录表单，在<a href="https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93.md" target="_blank" rel="noopener">第四章</a>中学会了运用数据库。本章将教你如何结合这两章的主题来创建一个简单的用户登录系统。</p>
 <p><em>本章的GitHub链接为：<a href="https://github.com/miguelgrinberg/microblog/tree/v0.5" target="_blank" rel="noopener">Browse</a>, <a href="https://github.com/miguelgrinberg/microblog/archive/v0.5.zip" target="_blank" rel="noopener">Zip</a>, <a href="https://github.com/miguelgrinberg/microblog/compare/v0.4...v0.5" target="_blank" rel="noopener">Diff</a>.</em></p>
+<a id="more"></a>
 <h2 id="密码哈希"><a href="#密码哈希" class="headerlink" title="密码哈希"></a>密码哈希</h2><p>在<a href="https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93.md" target="_blank" rel="noopener">第四章</a>中，用户模型设置了一个<code>password_hash</code>字段，到目前为止还没有被使用到。 这个字段的目的是保存用户密码的哈希值，并用于验证用户在登录过程中输入的密码。 密码哈希的实现是一个复杂的话题，应该由安全专家来搞定，不过，已经有数个现成的简单易用且功能完备加密库存在了。</p>
 <p>其中一个实现密码哈希的包是<a href="http://werkzeug.pocoo.org/" target="_blank" rel="noopener">Werkzeug</a>，当安装Flask时，你可能会在pip的输出中看到这个包，因为它是Flask的一个核心依赖项。 所以，Werkzeug已经安装在你的虚拟环境中。 以下Python shell会话演示了如何哈希密码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> werkzeug.security <span class="keyword">import</span> generate_password_hash</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hash = generate_password_hash(<span class="string">'foobar'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hash</span><br><span class="line"><span class="string">'pbkdf2:sha256:50000$vT9fkZM8$04dfa35c6476acf7e788a1b5b3c35e217c78dc04539d295f011f01f18cd2175f'</span></span><br></pre></td></tr></table></figure></p>
 <p>在这个例子中，通过一系列已知没有反向操作的加密操作，将密码<code>foobar</code>转换成一个长编码字符串，这意味着获得密码哈希值的人将无法使用它逆推出原始密码。 作为一个附加手段，多次哈希相同的密码，你将得到不同的结果，所以这使得无法通过查看它们的哈希值来确定两个用户是否具有相同的密码。</p>
