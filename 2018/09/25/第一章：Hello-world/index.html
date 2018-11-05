@@ -17,7 +17,8 @@
 <meta property="og:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-328651893e709b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-26T09:35:45.721Z">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/b6830adfgy1fwxb5zwgy6j20r60b5mxq.jpg">
+<meta property="og:updated_time" content="2018-11-05T09:23:03.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章：Hello world">
 <meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part I: Hello, World! 一趟愉快的学习之旅即将开始，跟随它你将学会用Python和Flask来创建Web应用。上面的视频包含了整个教程的内容预览（译者注：视频见原文）。通过学习本章内容，你将学会如何创建一个Flask项目，并在自己的电脑上运行一个简单的Flask Web应用。">
@@ -227,6 +228,15 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/4961528-328651893e709b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Hello, World!"></p>
 <p>完成演示之后，你可以按下Ctrl-C来停止Web服务。</p>
 <p>真是可喜可贺！你已经成功地向成为一名Web开发者的道路上迈出了重要的第一步！</p>
+<h1 id="本章总结："><a href="#本章总结：" class="headerlink" title="本章总结："></a>本章总结：</h1><p>&emsp;&emsp;本章为本教程的开篇之作，当然也就只是一些简单的软件安装和环境配置的介绍，总结如下：</p>
+<ol>
+<li>安装python：  建议直接安装python3.x， python官网已经很明确的宣布了，以后可能会停止对python2.x的支持，所以python3.x是王道，以后支持python3.x的第三方库肯定会越来越多</li>
+<li>配置虚拟环境：如果使用pycharm作为IDE的话，这段可以跳过，因为pycharm在新建项目的时候，默认是使用虚拟环境的。所以pycharm会帮你做好一切的配置。</li>
+<li>如果使用的是pycharm IDE作为开发环境，在新建一个Flask项目的时候，IDE会自动生成一个hellow world的DEMO,直接可以运行。但是自动生成的文档结构和本教程的略有不同。所以，本着学习的态度，还是建议按照本文来配置自己的文档结构，否则以后可能会出现问题。</li>
+<li>使用pycharm默认生成的项目中，和本文对应的<code>microblog.py</code>对应的文件是<code>app.py</code>,建议也要按照本教程将文件名修改成<code>microblog.py</code>,否则在第四章数据库的时候，设置<code>flask shell</code> 会不生效。</li>
+<li>设置环境变量的<code>set FLASK_APP=XXX.py</code>这一步必须得做，否则在数据库那一章同样的代码就是跑不起来，排错都不知道怎么排。</li>
+<li>相应的<code>set FLASK_DEBUG=True</code>也可以酌情设置一下，不过，如果使用的是pycharm IDE ，在项目的编译器上也可以勾选这个选项。<img src="http://wx3.sinaimg.cn/mw690/b6830adfgy1fwxb5zwgy6j20r60b5mxq.jpg" alt="1541409489019"></li>
+</ol>
 
       
 
