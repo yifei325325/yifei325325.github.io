@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yifei325325.github.io">
   <title>第二章：模板 | 四毛哥的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-4cbdf36f1c266281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-ed3d140cd60c7d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4961528-2d5ed4ead77f74ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-08T09:59:21.955Z">
+<meta property="og:updated_time" content="2018-11-15T07:14:24.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章：模板">
 <meta name="twitter:description" content="本文翻译自The Flask Mega-Tutorial Part II: Templates在Flask Mega-Tutorial系列的第二部分中，我将讨论如何使用模板。">
@@ -42,7 +42,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -157,7 +157,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第二章：模板" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-第二章：模板" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -227,29 +227,6 @@
 <li>模板调用：在视图函数中使用以下代码调用模板</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> render_template</span><br><span class="line"><span class="comment"># 这里写视图函数</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="comment"># 在视图函数的最后返回时，使用render_template()函数</span></span><br><span class="line">	<span class="keyword">return</span> render_template(<span class="string">'xxx.html'</span>)</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>jinja2的基本语法</li>
-</ol>
-<ul>
-<li>变量<br>使用<strong></strong>的语法规则来定义变量</li>
-<li><p>循环<br>使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">for</span> foo <span class="keyword">in</span> foos %&#125;</span><br></pre></td></tr></table></figure>
-<p>的语法规则来定义循环语句，注意左右大括号和百分号是紧挨着的，但是百分号和里面的内容之间<strong>必须有一个空格</strong>，否则会报错。在循环语句的结尾使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p>来表示。注意<em>end</em>和<em>for</em>之间没有空格。其他语法规则和python相同。</p>
-</li>
-<li><p>条件判断<br>和循环语句的语法规则类似，使用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> conditions %&#125;</span><br></pre></td></tr></table></figure>
-<p>开始，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>结束。中间可以有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% else %&#125;</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elif %&#125;</span><br></pre></td></tr></table></figure>
-<p>。其他语法和python相同</p>
-</li>
-</ul>
-<p><code>{/% base /%}</code>d;ajf;a</p>
 
       
 
@@ -436,6 +413,15 @@
       	</div>
     </div>
   </div>
+  <!-- 不蒜子内容 Start-->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_site_pv" style="display: inline;">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" style="display: inline;">
+    总访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  <!-- 不蒜子内容 End -->
 </footer>
     </div>
     <script>
@@ -504,11 +490,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
@@ -516,7 +502,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
